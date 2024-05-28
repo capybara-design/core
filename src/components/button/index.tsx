@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import { ComponentProps, ReactNode } from 'react';
 import './index.css';
 
-export type ButtonProps<T> = {
-  component?: T;
+export type ButtonProps<C> = {
+  component?: C;
   className?: string;
   children?: ReactNode;
   iconStart?: ReactNode;
@@ -11,8 +11,8 @@ export type ButtonProps<T> = {
 };
 
 export function Button<
-  RootComponentProps extends { className?: string; children?: ReactNode },
-  RootComponentType extends 'a' | 'button' | React.JSXElementConstructor<RootComponentProps>,
+  P extends { className?: string; children?: ReactNode },
+  C extends 'a' | 'button' | React.JSXElementConstructor<P>,
 >({
   className,
   children,
@@ -20,13 +20,13 @@ export function Button<
   iconStart,
   iconEnd,
   ...rest
-}: ButtonProps<RootComponentType> & ComponentProps<RootComponentType>) {
-  const RootComponent = component || 'button';
+}: ButtonProps<C> & ComponentProps<C>) {
+  const Comp = component || 'button';
   return (
-    <RootComponent className={classNames(className, 'cd-button')} {...(rest as any)}>
+    <Comp className={classNames(className, 'cd-button')} {...(rest as any)}>
       {iconStart && <span className="cd-button-icon cd-button-icon-start">{iconStart}</span>}
       <span className="cd-button-content">{children}</span>
       {iconEnd && <span className="cd-button-icon cd-button-icon-end">{iconEnd}</span>}
-    </RootComponent>
+    </Comp>
   );
 }
