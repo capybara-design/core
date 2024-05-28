@@ -2,7 +2,10 @@
   "name": "@capybara-design/core",
   "version": "0.0.1",
   "description": "Core components, styles, hooks and utilities for all platform",
-  "keywords": ["react", "design-system"],
+  "keywords": [
+    "react",
+    "design-system"
+  ],
   "homepage": "https://github.com/capybara-design/core#readme",
   "bugs": {
     "url": "https://github.com/capybara-design/core/issues"
@@ -56,5 +59,8 @@
     "doc": {
       "basename": "/core/"
     }
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
   }
 }

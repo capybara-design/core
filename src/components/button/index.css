@@ -1,0 +1,4 @@
+.cd-button {
+  --border-width: 1px;
+  border: solid var(--border-width) var(--border-color);
+}
