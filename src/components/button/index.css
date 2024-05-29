@@ -20,8 +20,8 @@
 }
 
 .cd-button-solid {
+  --border-width: 0px;
   background: var(--color);
-  border: 0;
   color: var(--fg-color);
 }
 
@@ -32,8 +32,8 @@
 }
 
 .cd-button-text {
+  --border-width: 0px;
   background: transparent;
-  border: 0;
   color: var(--color);
 }
 
@@ -50,17 +50,17 @@
 .cd-button-small {
   font-size: var(--font-size-small);
   height: var(--control-height-small);
-  padding-inline: var(--control-padding-small);
+  padding-inline: calc(var(--control-padding-small) - var(--border-width));
 }
 
 .cd-button-medium {
   font-size: var(--font-size);
   height: var(--control-height);
-  padding-inline: var(--control-padding);
+  padding-inline: calc(var(--control-padding) - var(--border-width));
 }
 
 .cd-button-large {
   font-size: var(--font-size-large);
   height: var(--control-height-large);
-  padding-inline: var(--control-padding-large);
+  padding-inline: calc(var(--control-padding-large) - var(--border-width));
 }
