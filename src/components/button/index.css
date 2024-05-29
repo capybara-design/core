@@ -50,14 +50,17 @@
 .cd-button-small {
   font-size: var(--font-size-small);
   height: var(--control-height-small);
+  padding-inline: var(--control-padding-small);
 }
 
 .cd-button-medium {
   font-size: var(--font-size);
   height: var(--control-height);
+  padding-inline: var(--control-padding);
 }
 
 .cd-button-large {
   font-size: var(--font-size-large);
   height: var(--control-height-large);
+  padding-inline: var(--control-padding-large);
 }

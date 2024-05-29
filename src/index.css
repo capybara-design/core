@@ -8,7 +8,11 @@
   --font-size-small: 12px;
   --font-size-large: 16px;
 
-  --control-height: 32px;
+  --control-height: 30px;
   --control-height-small: 24px;
-  --control-height-large: 40px;
+  --control-height-large: 36px;
+
+  --control-padding: 12px;
+  --control-padding-small: 8px;
+  --control-padding-large: 16px;
 }
