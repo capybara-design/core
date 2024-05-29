@@ -48,9 +48,16 @@
 }
 
 .cd-button-small {
-  font-size: small;
+  font-size: var(--font-size-small);
+  height: var(--control-height-small);
+}
+
+.cd-button-medium {
+  font-size: var(--font-size);
+  height: var(--control-height);
 }
 
 .cd-button-large {
-  font-size: large;
+  font-size: var(--font-size-large);
+  height: var(--control-height-large);
 }

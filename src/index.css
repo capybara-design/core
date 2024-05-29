@@ -3,4 +3,12 @@
   --color-secondary: #ff66cc;
   --color-border: #dcdcdc;
   --color-text: #333333;
+
+  --font-size: 14px;
+  --font-size-small: 12px;
+  --font-size-large: 16px;
+
+  --control-height: 32px;
+  --control-height-small: 24px;
+  --control-height-large: 40px;
 }
