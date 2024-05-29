@@ -1,12 +1,20 @@
 .cd-button {
   --border-width: 1px;
   --border-radius: 4px;
-  border: solid var(--border-width) var(--border-color);
+  background: var(--bg-color);
+  border: solid var(--border-width) var(--color);
   border-radius: var(--border-radius);
+  color: var(--color);
 }
 
 .cd-button-primary {
   --color: var(--color-primary);
+  --bg-color: #fff;
+  --fg-color: #fff;
+}
+
+.cd-button-secondary {
+  --color: var(--color-secondary);
   --bg-color: #fff;
   --fg-color: #fff;
 }
@@ -17,8 +25,8 @@
   color: var(--fg-color);
 }
 
-.cd-button-outline {
-  background: var(--bg-color);
+.cd-button-ghost {
+  background: transparent;
   border: solid var(--border-width) var(--color);
   color: var(--color);
 }
@@ -27,4 +35,22 @@
   background: transparent;
   border: 0;
   color: var(--color);
+}
+
+.cd-button-normal.cd-button-outline {
+  background-color: var(--color-fill);
+  border: solid var(--border-width) var(--color-border);
+  color: var(--color-text);
+}
+
+.cd-button-normal.cd-button-text {
+  color: var(--color-text);
+}
+
+.cd-button-small {
+  font-size: small;
+}
+
+.cd-button-large {
+  font-size: large;
 }

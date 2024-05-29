@@ -6,8 +6,9 @@ export type ButtonProps<C> = {
   component?: C;
   className?: string;
   children?: ReactNode;
-  variant?: 'solid' | 'outline' | 'ghost' | 'text';
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error';
+  variant?: 'outline' | 'solid' | 'ghost' | 'text';
+  color?: 'normal' | 'primary' | 'success' | 'warning' | 'error';
+  size?: 'medium' | 'small' | 'large';
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
 };
@@ -19,8 +20,9 @@ export function Button<
   className,
   children,
   component,
-  variant = 'solid',
-  color = 'primary',
+  variant = 'outline',
+  color = 'normal',
+  size = 'medium',
   iconStart,
   iconEnd,
   ...rest
@@ -28,7 +30,13 @@ export function Button<
   const Comp = component || 'button';
   return (
     <Comp
-      className={classNames(className, 'cd-button', 'cd-button-' + variant, 'cd-button-' + color)}
+      className={classNames(
+        className,
+        'cd-button',
+        'cd-button-' + variant,
+        'cd-button-' + color,
+        'cd-button-' + size,
+      )}
       {...(rest as any)}
     >
       {iconStart && <span className="cd-button-icon cd-button-icon-start">{iconStart}</span>}
