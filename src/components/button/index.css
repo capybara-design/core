@@ -1,4 +1,30 @@
 .cd-button {
   --border-width: 1px;
+  --border-radius: 4px;
   border: solid var(--border-width) var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.cd-button-primary {
+  --color: var(--color-primary);
+  --bg-color: #fff;
+  --fg-color: #fff;
+}
+
+.cd-button-solid {
+  background: var(--color);
+  border: 0;
+  color: var(--fg-color);
+}
+
+.cd-button-outline {
+  background: var(--bg-color);
+  border: solid var(--border-width) var(--color);
+  color: var(--color);
+}
+
+.cd-button-text {
+  background: transparent;
+  border: 0;
+  color: var(--color);
 }
