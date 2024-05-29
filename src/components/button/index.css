@@ -5,6 +5,7 @@
   border: solid var(--border-width) var(--color);
   border-radius: var(--border-radius);
   color: var(--color);
+  cursor: pointer;
 }
 
 .cd-button-primary {
