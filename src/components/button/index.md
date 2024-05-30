@@ -32,6 +32,82 @@ import { Button } from '@capybara-design/core';
 </div>;
 ```
 
+### Secondary
+
+```jsx
+import { Button } from '@capybara-design/core';
+
+<div style={{ display: 'flex', gap: 8 }}>
+  <Button color="secondary">Outline</Button>
+  <Button color="secondary" variant="solid">
+    Solid
+  </Button>
+  <Button color="secondary" variant="ghost">
+    Ghost
+  </Button>
+  <Button color="secondary" variant="text">
+    Text
+  </Button>
+</div>;
+```
+
+### Success
+
+```jsx
+import { Button } from '@capybara-design/core';
+
+<div style={{ display: 'flex', gap: 8 }}>
+  <Button color="success">Outline</Button>
+  <Button color="success" variant="solid">
+    Solid
+  </Button>
+  <Button color="success" variant="ghost">
+    Ghost
+  </Button>
+  <Button color="success" variant="text">
+    Text
+  </Button>
+</div>;
+```
+
+### Warning
+
+```jsx
+import { Button } from '@capybara-design/core';
+
+<div style={{ display: 'flex', gap: 8 }}>
+  <Button color="warning">Outline</Button>
+  <Button color="warning" variant="solid">
+    Solid
+  </Button>
+  <Button color="warning" variant="ghost">
+    Ghost
+  </Button>
+  <Button color="warning" variant="text">
+    Text
+  </Button>
+</div>;
+```
+
+### Error
+
+```jsx
+import { Button } from '@capybara-design/core';
+
+<div style={{ display: 'flex', gap: 8 }}>
+  <Button color="error">Outline</Button>
+  <Button color="error" variant="solid">
+    Solid
+  </Button>
+  <Button color="error" variant="ghost">
+    Ghost
+  </Button>
+  <Button color="error" variant="text">
+    Text
+  </Button>
+</div>;
+```
+
 ## Sizes
 
 ### Small

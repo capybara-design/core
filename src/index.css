@@ -1,6 +1,9 @@
 :root {
   --color-primary: #0066ff;
   --color-secondary: #ff66cc;
+  --color-success: #66cc00;
+  --color-warning: #ff6600;
+  --color-error: #ff3300;
   --color-border: #dcdcdc;
   --color-text: #333333;
 
