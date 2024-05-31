@@ -1,37 +1,37 @@
 .cd-button {
   --border-width: 1px;
   --border-radius: 4px;
-  border: solid var(--border-width) var(--color);
+  border: solid var(--border-width) var(--cd-color);
   border-radius: var(--border-radius);
   cursor: pointer;
 }
 
 .cd-button-primary {
-  --color: var(--color-primary);
+  --cd-color: var(--cd-color-primary);
   --bg-color: #fff;
   --fg-color: #fff;
 }
 
 .cd-button-secondary {
-  --color: var(--color-secondary);
+  --cd-color: var(--cd-color-secondary);
   --bg-color: #fff;
   --fg-color: #fff;
 }
 
 .cd-button-success {
-  --color: var(--color-success);
+  --cd-color: var(--cd-color-success);
   --bg-color: #fff;
   --fg-color: #fff;
 }
 
 .cd-button-warning {
-  --color: var(--color-warning);
+  --cd-color: var(--cd-color-warning);
   --bg-color: #fff;
   --fg-color: #fff;
 }
 
 .cd-button-error {
-  --color: var(--color-error);
+  --cd-color: var(--cd-color-error);
   --bg-color: #fff;
   --fg-color: #fff;
 }
@@ -39,41 +39,41 @@
 .cd-button-outline {
   --border-width: 1px;
   background: var(--bg-color);
-  color: var(--color);
+  color: var(--cd-color);
 }
 
 .cd-button-outline:hover {
-  background: color-mix(in srgb, var(--color) 5%, var(--bg-color));
+  background: color-mix(in srgb, var(--cd-color) 5%, var(--bg-color));
 }
 
 .cd-button-outline:active {
-  background: color-mix(in srgb, var(--color) 20%, var(--bg-color));
+  background: color-mix(in srgb, var(--cd-color) 20%, var(--bg-color));
 }
 
 .cd-button-solid {
   --border-width: 0px;
-  background: var(--color);
+  background: var(--cd-color);
   color: var(--fg-color);
 }
 
 .cd-button-solid:hover {
-  background: color-mix(in srgb, #fff 20%, var(--color));
+  background: color-mix(in srgb, #fff 20%, var(--cd-color));
 }
 
 .cd-button-solid:active {
-  background: color-mix(in srgb, #000 20%, var(--color));
+  background: color-mix(in srgb, #000 20%, var(--cd-color));
 }
 
 .cd-button-ghost {
   background: transparent;
-  border: solid var(--border-width) var(--color);
-  color: var(--color);
+  border: solid var(--border-width) var(--cd-color);
+  color: var(--cd-color);
 }
 
 .cd-button-text {
   --border-width: 0px;
   background: transparent;
-  color: var(--color);
+  color: var(--cd-color);
 }
 
 .cd-button-ghost:hover,
@@ -87,29 +87,29 @@
 }
 
 .cd-button-normal.cd-button-outline {
-  background-color: var(--color-fill);
-  border: solid var(--border-width) var(--color-border);
-  color: var(--color-text);
+  background-color: var(--cd-color-fill);
+  border: solid var(--border-width) var(--cd-color-border);
+  color: var(--cd-color-text);
 }
 
 .cd-button-normal.cd-button-text {
-  color: var(--color-text);
+  color: var(--cd-color-text);
 }
 
 .cd-button-small {
-  font-size: var(--font-size-small);
-  height: var(--control-height-small);
-  padding-inline: calc(var(--control-padding-small) - var(--border-width));
+  font-size: var(--cd-font-size-small);
+  height: var(--cd-control-height-small);
+  padding-inline: calc(var(--cd-control-padding-small) - var(--border-width));
 }
 
 .cd-button-medium {
-  font-size: var(--font-size);
-  height: var(--control-height);
-  padding-inline: calc(var(--control-padding) - var(--border-width));
+  font-size: var(--cd-font-size);
+  height: var(--cd-control-height);
+  padding-inline: calc(var(--cd-control-padding) - var(--border-width));
 }
 
 .cd-button-large {
-  font-size: var(--font-size-large);
-  height: var(--control-height-large);
-  padding-inline: calc(var(--control-padding-large) - var(--border-width));
+  font-size: var(--cd-font-size-large);
+  height: var(--cd-control-height-large);
+  padding-inline: calc(var(--cd-control-padding-large) - var(--border-width));
 }

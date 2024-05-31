@@ -1,0 +1,4 @@
+.cd-input {
+  --cd-input-border-width: var(--cd-border-width, 1px);
+  border: solid var(--cd-input-border-width) var(--cd-color-border);
+}
