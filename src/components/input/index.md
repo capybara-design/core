@@ -3,5 +3,5 @@
 ```jsx
 import { Input } from '@capybara-design/core';
 
-<Input />;
+<Input placeholder="Please type..." />;
 ```

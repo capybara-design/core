@@ -1,4 +1,34 @@
 .cd-input {
-  --cd-input-border-width: var(--cd-border-width, 1px);
+  --cd-input-border-width: var(--cd-control-border-width);
+  --cd-input-border-radius: var(--cd-control-border-radius);
+  --cd-input-border-color: var(--cd-color-border);
+  --cd-input-border-color-focus: var(--cd-color-primary);
+  --cd-input-font-size: var(--cd-font-size);
+  --cd-input-font-size-small: var(--cd-font-size-small);
+  --cd-input-font-size-large: var(--cd-font-size-large);
+  --cd-input-height: var(--cd-control-height);
+  --cd-input-padding: var(--cd-control-padding);
+
+  display: inline-flex;
   border: solid var(--cd-input-border-width) var(--cd-color-border);
+  border-radius: var(--cd-input-border-radius);
+  font-size: var(--cd-input-font-size);
+  height: var(--cd-input-height);
+}
+
+.cd-input:focus-within {
+  border-color: var(--cd-input-border-color-focus);
+}
+
+.cd-input-element {
+  display: block;
+  border: 0px;
+  outline: none;
+  background: transparent;
+  padding-inline: var(--cd-input-padding);
+  font-size: inherit;
+}
+
+.cd-input-block {
+  display: flex;
 }

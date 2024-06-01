@@ -113,3 +113,7 @@
   height: var(--cd-control-height-large);
   padding-inline: calc(var(--cd-control-padding-large) - var(--border-width));
 }
+
+.cd-button-block {
+  display: flex;
+}

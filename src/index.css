@@ -11,6 +11,9 @@
   --cd-font-size-small: 12px;
   --cd-font-size-large: 16px;
 
+  --cd-control-border-radius: 4px;
+  --cd-control-border-width: 1px;
+
   --cd-control-height: 30px;
   --cd-control-height-small: 24px;
   --cd-control-height-large: 36px;

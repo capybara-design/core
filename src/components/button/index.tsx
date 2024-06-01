@@ -9,6 +9,7 @@ export type ButtonProps<C> = {
   variant?: 'outline' | 'solid' | 'ghost' | 'text';
   color?: 'normal' | 'primary' | 'success' | 'warning' | 'error';
   size?: 'medium' | 'small' | 'large';
+  block?: boolean;
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
 };
