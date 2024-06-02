@@ -1,15 +1,15 @@
 .cd-button {
-  --border-width: 1px;
-  --border-radius: 4px;
+  --cd-button-border-radius: 4px;
+  --cd-button-border-width: 1px;
+  --cd-button-border-color: #dddddd;
   --cd-button-gap: 4px;
   --cd-button-icon-size: var(--cd-control-icon-size);
   --cd-button-icon-size-small: var(--cd-control-icon-size-small);
   --cd-button-icon-size-large: var(--cd-control-icon-size-large);
-  --cd-button-border-color: #dddddd;
 
   align-items: center;
-  border: solid var(--border-width) var(--cd-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--cd-button-border-radius);
+  border-style: solid;
   cursor: pointer;
   display: inline-flex;
   font-family: var(--cd-font-family);
@@ -27,74 +27,86 @@
   align-items: center;
 }
 
+/* Icons */
+
 .cd-button-icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Colors */
+
 .cd-button-primary {
-  --cd-color: var(--cd-color-primary);
-  --bg-color: #fff;
-  --fg-color: #fff;
+  --cd-button-main-color: var(--cd-color-primary);
+  --cd-button-bg-color: #fff;
+  --cd-button-fg-color: #fff;
 }
 
 .cd-button-secondary {
-  --cd-color: var(--cd-color-secondary);
-  --bg-color: #fff;
-  --fg-color: #fff;
+  --cd-button-main-color: var(--cd-color-secondary);
+  --cd-button-bg-color: #fff;
+  --cd-button-fg-color: #fff;
 }
 
 .cd-button-success {
-  --cd-color: var(--cd-color-success);
-  --bg-color: #fff;
-  --fg-color: #fff;
+  --cd-button-main-color: var(--cd-color-success);
+  --cd-button-bg-color: #fff;
+  --cd-button-fg-color: #fff;
 }
 
 .cd-button-warning {
-  --cd-color: var(--cd-color-warning);
-  --bg-color: #fff;
-  --fg-color: #fff;
+  --cd-button-main-color: var(--cd-color-warning);
+  --cd-button-bg-color: #fff;
+  --cd-button-fg-color: #fff;
 }
 
 .cd-button-error {
-  --cd-color: var(--cd-color-error);
-  --bg-color: #fff;
-  --fg-color: #fff;
+  --cd-button-main-color: var(--cd-color-error);
+  --cd-button-bg-color: #fff;
+  --cd-button-fg-color: #fff;
 }
 
+.cd-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Variants */
+
 .cd-button-line {
-  --border-width: 1px;
-  background: var(--bg-color);
-  color: var(--cd-color);
+  background: var(--cd-button-bg-color);
+  border-color: var(--cd-button-main-color);
+  border-width: var(--cd-button-border-width);
+  color: var(--cd-button-main-color);
 }
 
 .cd-button-line:not(:disabled):hover {
-  background: color-mix(in srgb, var(--cd-color) 5%, var(--bg-color));
+  background: color-mix(in srgb, var(--cd-color) 5%, var(--cd-button-bg-color));
 }
 
 .cd-button-line:not(:disabled):active {
-  background: color-mix(in srgb, var(--cd-color) 20%, var(--bg-color));
+  background: color-mix(in srgb, var(--cd-color) 20%, var(--cd-button-bg-color));
 }
 
 .cd-button-fill {
-  --border-width: 0px;
-  background: var(--cd-color);
-  color: var(--fg-color);
+  background: var(--cd-button-main-color);
+  border-width: 0;
+  color: var(--cd-button-fg-color);
 }
 
 .cd-button-fill:not(:disabled):hover {
-  background: color-mix(in srgb, #fff 20%, var(--cd-color));
+  background: color-mix(in srgb, #fff 20%, var(--cd-button-main-color));
 }
 
 .cd-button-fill:not(:disabled):active {
-  background: color-mix(in srgb, #000 20%, var(--cd-color));
+  background: color-mix(in srgb, #000 20%, var(--cd-button-main-color));
 }
 
 .cd-button-text {
-  --border-width: 0px;
   background: transparent;
-  color: var(--cd-color);
+  border: 0;
+  color: var(--cd-button-main-color);
 }
 
 .cd-button-text:not(:disabled):hover {
@@ -107,7 +119,7 @@
 
 .cd-button-normal.cd-button-line {
   background-color: var(--cd-color-fill);
-  border: solid var(--border-width) var(--cd-color-border);
+  border-color: var(--cd-color-border);
   color: var(--cd-color-text);
 }
 
@@ -115,10 +127,16 @@
   color: var(--cd-color-text);
 }
 
+/* Sizes */
+
 .cd-button-small {
   font-size: var(--cd-font-size-small);
   height: var(--cd-control-height-small);
-  padding-inline: calc(var(--cd-control-padding-small) - var(--border-width));
+  padding-inline: var(--cd-control-padding-small);
+}
+
+.cd-button-line.cd-button-small {
+  padding-inline: calc(var(--cd-control-padding-small) - var(--cd-button-border-width));
 }
 
 .cd-button-small .cd-button-icon svg {
@@ -128,7 +146,11 @@
 .cd-button-medium {
   font-size: var(--cd-font-size);
   height: var(--cd-control-height);
-  padding-inline: calc(var(--cd-control-padding) - var(--border-width));
+  padding-inline: var(--cd-control-padding);
+}
+
+.cd-button-line.cd-button-medium {
+  padding-inline: calc(var(--cd-control-padding) - var(--cd-button-border-width));
 }
 
 .cd-button-medium .cd-button-icon svg {
@@ -138,14 +160,13 @@
 .cd-button-large {
   font-size: var(--cd-font-size-large);
   height: var(--cd-control-height-large);
-  padding-inline: calc(var(--cd-control-padding-large) - var(--border-width));
+  padding-inline: var(--cd-control-padding-large);
+}
+
+.cd-button-line.cd-button-large {
+  padding-inline: calc(var(--cd-control-padding-large) - var(--cd-button-border-width));
 }
 
 .cd-button-large .cd-button-icon svg {
   font-size: var(--cd-button-icon-size-large);
-}
-
-.cd-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
