@@ -41,5 +41,14 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   <div>
     <Input defaultValue="Error" state="error" />
   </div>
+  <div>
+    <Input defaultValue="Disabled" disabled />
+  </div>
+  <div>
+    <Input defaultValue="Readonly" readOnly />
+  </div>
+  <div>
+    <Input defaultValue="Preview" preview />
+  </div>
 </div>;
 ```

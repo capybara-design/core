@@ -6,12 +6,15 @@ export interface InputProps {
   block?: boolean;
   className?: string;
   defaultValue?: string;
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  placeholder?: string;
-  size?: 'small' | 'medium' | 'large';
-  state?: 'normal' | 'success' | 'warning' | 'error';
+  disabled?: boolean;
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  placeholder?: string;
+  preview?: boolean;
+  readOnly?: boolean;
+  size?: 'small' | 'medium' | 'large';
+  state?: 'normal' | 'success' | 'warning' | 'error';
   type?: 'text' | 'search' | 'url' | 'email' | 'password' | 'tel';
   value?: string;
 }
@@ -20,10 +23,13 @@ export function Input({
   block,
   className,
   defaultValue,
+  disabled,
   iconStart,
   iconEnd,
   onChange,
   placeholder,
+  preview,
+  readOnly,
   size = 'medium',
   state = 'normal',
   type,
@@ -37,6 +43,9 @@ export function Input({
         block && 'cd-input-block',
         'cd-input-' + state,
         'cd-input-' + size,
+        disabled && 'cd-input-disabled',
+        readOnly && 'cd-input-readonly',
+        preview && 'cd-input-preview',
       )}
     >
       {iconStart && <span className="cd-input-icon cd-input-icon-start">{iconStart}</span>}
@@ -47,6 +56,8 @@ export function Input({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        disabled={disabled}
+        readOnly={readOnly || preview}
       />
       {iconEnd && <span className="cd-input-icon cd-input-icon-end">{iconEnd}</span>}
     </div>

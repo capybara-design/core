@@ -6,6 +6,8 @@
   --cd-input-border-color-focus: var(--cd-color-primary);
   --cd-input-border-color-success: var(--cd-color-success);
   --cd-input-border-color-warning: var(--cd-color-warning);
+  --cd-input-bg-color-disabled: #eeeeee;
+  --cd-input-text-color-disabled: #777777;
   --cd-input-font-size: var(--cd-font-size);
   --cd-input-font-size-small: var(--cd-font-size-small);
   --cd-input-font-size-large: var(--cd-font-size-large);
@@ -140,4 +142,30 @@
 .cd-input-warning:focus-within {
   border-color: var(--cd-input-border-color-warning);
   outline-color: color-mix(in srgb, var(--cd-input-border-color-warning) 25%, transparent);
+}
+
+/* Disabled */
+
+.cd-input-disabled {
+  background-color: var(--cd-input-bg-color-disabled);
+}
+
+.cd-input-disabled .cd-input-element:disabled {
+  color: var(--cd-input-text-color-disabled);
+}
+
+/* Preview */
+
+.cd-input-preview {
+  padding-inline: 0;
+  border: 0;
+}
+
+.cd-input-preview:focus-within {
+  outline: 0;
+}
+
+.cd-input-preview .cd-input-element {
+  padding-inline: 0;
+  border: 0;
 }
