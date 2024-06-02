@@ -132,11 +132,11 @@
 .cd-button-small {
   font-size: var(--cd-font-size-small);
   height: var(--cd-control-height-small);
-  padding-inline: var(--cd-control-padding-small);
+  padding-inline: calc(var(--cd-control-padding-small) + var(--cd-button-border-width));
 }
 
 .cd-button-line.cd-button-small {
-  padding-inline: calc(var(--cd-control-padding-small) - var(--cd-button-border-width));
+  padding-inline: var(--cd-control-padding-small);
 }
 
 .cd-button-small .cd-button-icon svg {
@@ -146,11 +146,11 @@
 .cd-button-medium {
   font-size: var(--cd-font-size);
   height: var(--cd-control-height);
-  padding-inline: var(--cd-control-padding);
+  padding-inline: calc(var(--cd-control-padding) + var(--cd-button-border-width));
 }
 
 .cd-button-line.cd-button-medium {
-  padding-inline: calc(var(--cd-control-padding) - var(--cd-button-border-width));
+  padding-inline: var(--cd-control-padding);
 }
 
 .cd-button-medium .cd-button-icon svg {
@@ -160,11 +160,11 @@
 .cd-button-large {
   font-size: var(--cd-font-size-large);
   height: var(--cd-control-height-large);
-  padding-inline: var(--cd-control-padding-large);
+  padding-inline: calc(var(--cd-control-padding-large) + var(--cd-button-border-width));
 }
 
 .cd-button-line.cd-button-large {
-  padding-inline: calc(var(--cd-control-padding-large) - var(--cd-button-border-width));
+  padding-inline: var(--cd-control-padding-large);
 }
 
 .cd-button-large .cd-button-icon svg {

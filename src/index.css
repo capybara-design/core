@@ -27,9 +27,9 @@
 
   --cd-control-outline-width: 4px;
 
-  --cd-control-padding: 12px;
-  --cd-control-padding-small: 8px;
-  --cd-control-padding-large: 16px;
+  --cd-control-padding: 8px;
+  --cd-control-padding-small: 6px;
+  --cd-control-padding-large: 12px;
 
   --cd-transition-duration: 0.3s;
 
