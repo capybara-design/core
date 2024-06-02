@@ -6,7 +6,7 @@ export type ButtonProps<C> = {
   component?: C;
   className?: string;
   children?: ReactNode;
-  variant?: 'outline' | 'solid' | 'ghost' | 'text';
+  variant?: 'line' | 'fill' | 'text';
   color?: 'normal' | 'primary' | 'success' | 'warning' | 'error';
   size?: 'medium' | 'small' | 'large';
   block?: boolean;
@@ -21,7 +21,7 @@ export function Button<
   className,
   children,
   component,
-  variant = 'outline',
+  variant = 'line',
   color = 'normal',
   size = 'medium',
   iconStart,

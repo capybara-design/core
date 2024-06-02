@@ -2,48 +2,51 @@
 
 ## Variants & Colors
 
-### Normal
+Button has three variants: line (default), fill, text.
 
-```jsx
+And six colors (three theming + three functional): normal (default), primary, secondary, success, warning, error.
+
+```jsx filename="Normal color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button>Outline</Button>
+  <Button>Line</Button>
+  <Button variant="fill">Line</Button>
   <Button variant="text">Text</Button>
+  <Button disabled>Line disabled</Button>
 </div>;
 ```
 
-### Primary
-
-```jsx
+```jsx filename="Primary color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button color="primary">Outline</Button>
-  <Button color="primary" variant="solid">
-    Solid
-  </Button>
-  <Button color="primary" variant="ghost">
-    Ghost
+  <Button color="primary">Line</Button>
+  <Button color="primary" variant="fill">
+    Fill
   </Button>
   <Button color="primary" variant="text">
     Text
   </Button>
+  <Button color="primary" disabled>
+    Line disabled
+  </Button>
+  <Button color="primary" variant="fill" disabled>
+    Fill disabled
+  </Button>
+  <Button color="primary" variant="text" disabled>
+    Text disabled
+  </Button>
 </div>;
 ```
 
-### Secondary
-
-```jsx
+```jsx filename="Secondary color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button color="secondary">Outline</Button>
-  <Button color="secondary" variant="solid">
-    Solid
-  </Button>
-  <Button color="secondary" variant="ghost">
-    Ghost
+  <Button color="secondary">Line</Button>
+  <Button color="secondary" variant="fill">
+    Fill
   </Button>
   <Button color="secondary" variant="text">
     Text
@@ -51,18 +54,13 @@ import { Button } from '@capybara-design/core';
 </div>;
 ```
 
-### Success
-
-```jsx
+```jsx filename="Success color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button color="success">Outline</Button>
-  <Button color="success" variant="solid">
-    Solid
-  </Button>
-  <Button color="success" variant="ghost">
-    Ghost
+  <Button color="success">Line</Button>
+  <Button color="success" variant="fill">
+    Fill
   </Button>
   <Button color="success" variant="text">
     Text
@@ -70,18 +68,13 @@ import { Button } from '@capybara-design/core';
 </div>;
 ```
 
-### Warning
-
-```jsx
+```jsx filename="Warning color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button color="warning">Outline</Button>
-  <Button color="warning" variant="solid">
-    Solid
-  </Button>
-  <Button color="warning" variant="ghost">
-    Ghost
+  <Button color="warning">Line</Button>
+  <Button color="warning" variant="fill">
+    Fill
   </Button>
   <Button color="warning" variant="text">
     Text
@@ -89,18 +82,13 @@ import { Button } from '@capybara-design/core';
 </div>;
 ```
 
-### Error
-
-```jsx
+```jsx filename="Error color"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
-  <Button color="error">Outline</Button>
-  <Button color="error" variant="solid">
-    Solid
-  </Button>
-  <Button color="error" variant="ghost">
-    Ghost
+  <Button color="error">Line</Button>
+  <Button color="error" variant="fill">
+    Fill
   </Button>
   <Button color="error" variant="text">
     Text
@@ -110,20 +98,17 @@ import { Button } from '@capybara-design/core';
 
 ## Sizes
 
-### Small
+Button has three sizes: small, medium (default) and large.
 
-```jsx
+```jsx filename="Small size"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
   <Button size="small" color="primary">
-    Outline
+    Line
   </Button>
-  <Button size="small" color="primary" variant="solid">
-    Solid
-  </Button>
-  <Button size="small" color="primary" variant="ghost">
-    Ghost
+  <Button size="small" color="primary" variant="fill">
+    Fill
   </Button>
   <Button size="small" color="primary" variant="text">
     Text
@@ -131,20 +116,15 @@ import { Button } from '@capybara-design/core';
 </div>;
 ```
 
-### Large
-
-```jsx
+```jsx filename="Large size"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', gap: 8 }}>
   <Button size="large" color="primary">
-    Outline
+    Line
   </Button>
-  <Button size="large" color="primary" variant="solid">
-    Solid
-  </Button>
-  <Button size="large" color="primary" variant="ghost">
-    Ghost
+  <Button size="large" color="primary" variant="fill">
+    Fill
   </Button>
   <Button size="large" color="primary" variant="text">
     Text
@@ -156,7 +136,7 @@ import { Button } from '@capybara-design/core';
 
 Capybara Design doesn't provide icon set. But it supports most SVG icons, including [Bootstrap Icons](https://github.com/guoyunhe/react-bootstrap-icons-pro), [Remix Icon](https://github.com/Remix-Design/RemixIcon).
 
-```jsx
+```jsx filename="Button icon: small size"
 import { Button } from '@capybara-design/core';
 import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-icons-pro';
 
@@ -164,25 +144,41 @@ import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-ic
   <Button iconStart={<BiArrowLeft />} color="primary" size="small">
     Previous
   </Button>
-  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary" size="small">
+  <Button iconEnd={<BiArrowRight />} variant="fill" color="primary" size="small">
     Next
   </Button>
   <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary" size="small">
     Preview
   </Button>
+</div>;
+```
+
+```jsx filename="Button icon: medium size"
+import { Button } from '@capybara-design/core';
+import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-icons-pro';
+
+<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
   <Button iconStart={<BiArrowLeft />} color="primary">
     Previous
   </Button>
-  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary">
+  <Button iconEnd={<BiArrowRight />} variant="fill" color="primary">
     Next
   </Button>
   <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary">
     Preview
   </Button>
+</div>;
+```
+
+```jsx filename="Button icon: large size"
+import { Button } from '@capybara-design/core';
+import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-icons-pro';
+
+<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
   <Button iconStart={<BiArrowLeft />} color="primary" size="large">
     Previous
   </Button>
-  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary" size="large">
+  <Button iconEnd={<BiArrowRight />} variant="fill" color="primary" size="large">
     Next
   </Button>
   <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary" size="large">

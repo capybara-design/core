@@ -5,6 +5,7 @@
   --cd-button-icon-size: var(--cd-control-icon-size);
   --cd-button-icon-size-small: var(--cd-control-icon-size-small);
   --cd-button-icon-size-large: var(--cd-control-icon-size-large);
+  --cd-button-border-color: #dddddd;
 
   align-items: center;
   border: solid var(--border-width) var(--cd-color);
@@ -62,38 +63,32 @@
   --fg-color: #fff;
 }
 
-.cd-button-outline {
+.cd-button-line {
   --border-width: 1px;
   background: var(--bg-color);
   color: var(--cd-color);
 }
 
-.cd-button-outline:hover {
+.cd-button-line:not(:disabled):hover {
   background: color-mix(in srgb, var(--cd-color) 5%, var(--bg-color));
 }
 
-.cd-button-outline:active {
+.cd-button-line:not(:disabled):active {
   background: color-mix(in srgb, var(--cd-color) 20%, var(--bg-color));
 }
 
-.cd-button-solid {
+.cd-button-fill {
   --border-width: 0px;
   background: var(--cd-color);
   color: var(--fg-color);
 }
 
-.cd-button-solid:hover {
+.cd-button-fill:not(:disabled):hover {
   background: color-mix(in srgb, #fff 20%, var(--cd-color));
 }
 
-.cd-button-solid:active {
+.cd-button-fill:not(:disabled):active {
   background: color-mix(in srgb, #000 20%, var(--cd-color));
-}
-
-.cd-button-ghost {
-  background: transparent;
-  border: solid var(--border-width) var(--cd-color);
-  color: var(--cd-color);
 }
 
 .cd-button-text {
@@ -102,17 +97,15 @@
   color: var(--cd-color);
 }
 
-.cd-button-ghost:hover,
-.cd-button-text:hover {
+.cd-button-text:not(:disabled):hover {
   background: color-mix(in srgb, #000 5%, transparent);
 }
 
-.cd-button-ghost:active,
-.cd-button-text:active {
+.cd-button-text:not(:disabled):active {
   background: color-mix(in srgb, #000 10%, transparent);
 }
 
-.cd-button-normal.cd-button-outline {
+.cd-button-normal.cd-button-line {
   background-color: var(--cd-color-fill);
   border: solid var(--border-width) var(--cd-color-border);
   color: var(--cd-color-text);
@@ -150,4 +143,9 @@
 
 .cd-button-large .cd-button-icon svg {
   font-size: var(--cd-button-icon-size-large);
+}
+
+.cd-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
