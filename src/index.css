@@ -1,8 +1,8 @@
 :root {
   --cd-color-primary: #0066ff;
   --cd-color-secondary: #ff66cc;
-  --cd-color-success: #66cc00;
-  --cd-color-warning: #ff6600;
+  --cd-color-success: #469b09;
+  --cd-color-warning: #ff8f00;
   --cd-color-error: #ff3300;
   --cd-color-border: #dcdcdc;
   --cd-color-text: #333333;
@@ -25,9 +25,13 @@
   --cd-control-height-small: 24px;
   --cd-control-height-large: 36px;
 
+  --cd-control-outline-width: 4px;
+
   --cd-control-padding: 12px;
   --cd-control-padding-small: 8px;
   --cd-control-padding-large: 16px;
+
+  --cd-transition-duration: 0.3s;
 
   font-family: var(--cd-font-family);
 }

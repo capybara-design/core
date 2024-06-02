@@ -2,13 +2,17 @@
   --cd-input-border-width: var(--cd-control-border-width);
   --cd-input-border-radius: var(--cd-control-border-radius);
   --cd-input-border-color: var(--cd-color-border);
+  --cd-input-border-color-error: var(--cd-color-error);
   --cd-input-border-color-focus: var(--cd-color-primary);
+  --cd-input-border-color-success: var(--cd-color-success);
+  --cd-input-border-color-warning: var(--cd-color-warning);
   --cd-input-font-size: var(--cd-font-size);
   --cd-input-font-size-small: var(--cd-font-size-small);
   --cd-input-font-size-large: var(--cd-font-size-large);
   --cd-input-height: var(--cd-control-height);
   --cd-input-height-small: var(--cd-control-height-small);
   --cd-input-height-large: var(--cd-control-height-large);
+  --cd-input-outline-width: var(--cd-control-outline-width);
   --cd-input-padding: var(--cd-control-padding);
   --cd-input-padding-small: var(--cd-control-padding-small);
   --cd-input-padding-large: var(--cd-control-padding-large);
@@ -18,10 +22,13 @@
   border-radius: var(--cd-input-border-radius);
   font-size: var(--cd-input-font-size);
   height: var(--cd-input-height);
+  transition: var(--cd-transition-duration) ease-out;
 }
 
 .cd-input:focus-within {
   border-color: var(--cd-input-border-color-focus);
+  outline: var(--cd-input-outline-width) solid
+    color-mix(in srgb, var(--cd-input-border-color-focus) 25%, transparent);
 }
 
 .cd-input-element {
@@ -53,4 +60,33 @@
 
 .cd-input-block {
   display: flex;
+}
+
+/* States */
+
+.cd-input-error {
+  border-color: var(--cd-input-border-color-error);
+}
+
+.cd-input-error:focus-within {
+  border-color: var(--cd-input-border-color-error);
+  outline-color: color-mix(in srgb, var(--cd-input-border-color-error) 25%, transparent);
+}
+
+.cd-input-success {
+  border-color: var(--cd-input-border-color-success);
+}
+
+.cd-input-success:focus-within {
+  border-color: var(--cd-input-border-color-success);
+  outline-color: color-mix(in srgb, var(--cd-input-border-color-success) 25%, transparent);
+}
+
+.cd-input-warning {
+  border-color: var(--cd-input-border-color-warning);
+}
+
+.cd-input-warning:focus-within {
+  border-color: var(--cd-input-border-color-warning);
+  outline-color: color-mix(in srgb, var(--cd-input-border-color-warning) 25%, transparent);
 }
