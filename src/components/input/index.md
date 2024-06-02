@@ -60,5 +60,7 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
 | `small` size    | ✅              | ✅         | ✅            | ✅          | ✅              |
 | `medium` size   | ✅              | ✅         | ✅            | ✅          | ✅              |
 | `large` size    | ✅              | ✅         | ✅            | ❌          | ✅              |
+| `preview` mode  | ✅              | ❌         | ✅            | ❌          | ✅              |
+| `success` state | ✅              | ✅         | ✅            | ✅          | ✅              |
 | `error` state   | ✅              | ✅         | ✅            | ✅          | ✅              |
-| `warning` state | ✅              | ❌         | ✅            | ✅          | ✅              |
+| `warning` state | ✅              | ✅         | ❌            | ❌          | ❌              |
