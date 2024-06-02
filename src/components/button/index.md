@@ -151,3 +151,42 @@ import { Button } from '@capybara-design/core';
   </Button>
 </div>;
 ```
+
+## Icons
+
+Capybara Design doesn't provide icon set. But it supports most SVG icons, including [Bootstrap Icons](https://github.com/guoyunhe/react-bootstrap-icons-pro), [Remix Icon](https://github.com/Remix-Design/RemixIcon).
+
+```jsx
+import { Button } from '@capybara-design/core';
+import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-icons-pro';
+
+<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+  <Button iconStart={<BiArrowLeft />} color="primary" size="small">
+    Previous
+  </Button>
+  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary" size="small">
+    Next
+  </Button>
+  <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary" size="small">
+    Preview
+  </Button>
+  <Button iconStart={<BiArrowLeft />} color="primary">
+    Previous
+  </Button>
+  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary">
+    Next
+  </Button>
+  <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary">
+    Preview
+  </Button>
+  <Button iconStart={<BiArrowLeft />} color="primary" size="large">
+    Previous
+  </Button>
+  <Button iconEnd={<BiArrowRight />} variant="solid" color="primary" size="large">
+    Next
+  </Button>
+  <Button iconStart={<BiBoxArrowUpRight />} variant="text" color="primary" size="large">
+    Preview
+  </Button>
+</div>;
+```

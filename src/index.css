@@ -7,12 +7,18 @@
   --cd-color-border: #dcdcdc;
   --cd-color-text: #333333;
 
+  --cd-font-family: Roboto;
+
   --cd-font-size: 14px;
   --cd-font-size-small: 12px;
   --cd-font-size-large: 16px;
 
   --cd-control-border-radius: 4px;
   --cd-control-border-width: 1px;
+
+  --cd-control-icon-size: 16px;
+  --cd-control-icon-size-small: 14px;
+  --cd-control-icon-size-large: 20px;
 
   --cd-control-height: 30px;
   --cd-control-height-small: 24px;
@@ -21,4 +27,6 @@
   --cd-control-padding: 12px;
   --cd-control-padding-small: 8px;
   --cd-control-padding-large: 16px;
+
+  font-family: var(--cd-font-family);
 }

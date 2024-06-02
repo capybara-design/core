@@ -1,9 +1,35 @@
 .cd-button {
   --border-width: 1px;
   --border-radius: 4px;
+  --cd-button-gap: 4px;
+  --cd-button-icon-size: var(--cd-control-icon-size);
+  --cd-button-icon-size-small: var(--cd-control-icon-size-small);
+  --cd-button-icon-size-large: var(--cd-control-icon-size-large);
+
+  align-items: center;
   border: solid var(--border-width) var(--cd-color);
   border-radius: var(--border-radius);
   cursor: pointer;
+  display: inline-flex;
+  font-family: var(--cd-font-family);
+  gap: 4px;
+  justify-content: center;
+}
+
+.cd-button-block {
+  display: flex;
+}
+
+.cd-button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd-button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cd-button-primary {
@@ -102,10 +128,18 @@
   padding-inline: calc(var(--cd-control-padding-small) - var(--border-width));
 }
 
+.cd-button-small .cd-button-icon svg {
+  font-size: var(--cd-button-icon-size-small);
+}
+
 .cd-button-medium {
   font-size: var(--cd-font-size);
   height: var(--cd-control-height);
   padding-inline: calc(var(--cd-control-padding) - var(--border-width));
+}
+
+.cd-button-medium .cd-button-icon svg {
+  font-size: var(--cd-button-icon-size);
 }
 
 .cd-button-large {
@@ -114,6 +148,6 @@
   padding-inline: calc(var(--cd-control-padding-large) - var(--border-width));
 }
 
-.cd-button-block {
-  display: flex;
+.cd-button-large .cd-button-icon svg {
+  font-size: var(--cd-button-icon-size-large);
 }
