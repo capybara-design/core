@@ -12,16 +12,22 @@
   --cd-input-height: var(--cd-control-height);
   --cd-input-height-small: var(--cd-control-height-small);
   --cd-input-height-large: var(--cd-control-height-large);
+  --cd-input-icon-size: var(--cd-control-icon-size);
+  --cd-input-icon-size-small: var(--cd-control-icon-size-small);
+  --cd-input-icon-size-large: var(--cd-control-icon-size-large);
   --cd-input-outline-width: var(--cd-control-outline-width);
   --cd-input-padding: var(--cd-control-padding);
   --cd-input-padding-small: var(--cd-control-padding-small);
   --cd-input-padding-large: var(--cd-control-padding-large);
 
   display: inline-flex;
+  gap: 4px;
+  align-items: center;
   border: solid var(--cd-input-border-width) var(--cd-color-border);
   border-radius: var(--cd-input-border-radius);
-  font-size: var(--cd-input-font-size);
+  font-family: var(--cd-font-family);
   height: var(--cd-input-height);
+  position: relative;
   transition: var(--cd-transition-duration) ease-out;
 }
 
@@ -37,8 +43,26 @@
   outline: none;
   background: transparent;
   padding-inline: var(--cd-input-padding);
+  font-family: var(--cd-font-family);
   font-size: inherit;
 }
+
+/* Icons */
+
+.cd-input-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+}
+
+.cd-input-icon-end {
+  inset-inline-end: var(--cd-input-padding);
+}
+
+/* Sizes */
 
 .cd-input-small {
   font-size: var(--cd-input-font-size-small);
@@ -49,6 +73,27 @@
   padding-inline: var(--cd-input-padding-small);
 }
 
+.cd-input-small .cd-input-icon svg {
+  font-size: var(--cd-input-icon-size-small);
+  height: var(--cd-input-icon-size-small);
+  width: var(--cd-input-icon-size-small);
+}
+
+.cd-input-medium {
+  font-size: var(--cd-input-font-size);
+  height: var(--cd-input-height);
+}
+
+.cd-input-medium .cd-input-element {
+  padding-inline: var(--cd-input-padding);
+}
+
+.cd-input-medium .cd-input-icon svg {
+  font-size: var(--cd-input-icon-size);
+  height: var(--cd-input-icon-size);
+  width: var(--cd-input-icon-size);
+}
+
 .cd-input-large {
   font-size: var(--cd-input-font-size-large);
   height: var(--cd-input-height-large);
@@ -56,6 +101,12 @@
 
 .cd-input-large .cd-input-element {
   padding-inline: var(--cd-input-padding-large);
+}
+
+.cd-input-small .cd-input-icon svg {
+  font-size: var(--cd-input-icon-size-small);
+  height: var(--cd-input-icon-size-small);
+  width: var(--cd-input-icon-size-small);
 }
 
 .cd-input-block {

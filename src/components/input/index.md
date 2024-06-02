@@ -22,19 +22,24 @@ import { Input } from '@capybara-design/core';
 
 ```jsx
 import { Input } from '@capybara-design/core';
+import { BiCheck2 } from 'react-bootstrap-icons-pro';
 
 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
   <div>
-    <Input placeholder="Normal" />
+    <Input defaultValue="Normal" />
   </div>
   <div>
-    <Input placeholder="Success" state="success" />
+    <Input
+      defaultValue="Success"
+      state="success"
+      iconEnd={<BiCheck2 style={{ color: 'var(--cd-color-success)' }} />}
+    />
   </div>
   <div>
-    <Input placeholder="Warning" state="warning" />
+    <Input defaultValue="Warning" state="warning" />
   </div>
   <div>
-    <Input placeholder="Error" state="error" />
+    <Input defaultValue="Error" state="error" />
   </div>
 </div>;
 ```
