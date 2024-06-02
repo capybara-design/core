@@ -52,3 +52,13 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   </div>
 </div>;
 ```
+
+## Compare with other libraries
+
+| Features        | Capybara Design | Ant Design | Fusion Design | Material UI | React Bootstrap |
+| --------------- | --------------- | ---------- | ------------- | ----------- | --------------- |
+| `small` size    | ✅              | ✅         | ✅            | ✅          | ✅              |
+| `medium` size   | ✅              | ✅         | ✅            | ✅          | ✅              |
+| `large` size    | ✅              | ✅         | ✅            | ❌          | ✅              |
+| `error` state   | ✅              | ✅         | ✅            | ✅          | ✅              |
+| `warning` state | ✅              | ❌         | ✅            | ✅          | ✅              |

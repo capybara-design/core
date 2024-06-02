@@ -186,3 +186,10 @@ import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-ic
   </Button>
 </div>;
 ```
+
+## Compare with other libraries
+
+| Features                 | Capybara Design | Ant Design | Fusion Design | Material UI | React Bootstrap |
+| ------------------------ | --------------- | ---------- | ------------- | ----------- | --------------- |
+| as `<a>`                 | ✅              | ✅         | ✅            | ✅          | ✅              |
+| as React Router `<Link>` | ✅              | ❌         | ✅            | ✅          | ✅              |
