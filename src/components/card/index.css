@@ -1,0 +1,13 @@
+.cd-card {
+  --cd-card-border-color: var(--cd-color-border);
+  --cd-card-border-radius: 8px;
+  --cd-card-padding-block: 16px;
+  --cd-card-padding-inline: 16px;
+
+  border-radius: var(--cd-card-border-radius);
+  box-sizing: border-box;
+}
+
+.cd-card-line {
+  border: 1px solid var(--cd-card-border-color);
+}
