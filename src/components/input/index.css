@@ -27,6 +27,7 @@
   align-items: center;
   border: solid var(--cd-input-border-width) var(--cd-color-border);
   border-radius: var(--cd-input-border-radius);
+  box-sizing: border-box;
   font-family: var(--cd-font-family);
   height: var(--cd-input-height);
   position: relative;

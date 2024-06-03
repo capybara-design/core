@@ -187,6 +187,24 @@ import { BiArrowLeft, BiArrowRight, BiBoxArrowUpRight } from 'react-bootstrap-ic
 </div>;
 ```
 
+## Components
+
+By default, Buttons are rendered as `<button>` element. You can render Button to any HTML elements or React components with `component` property.
+
+```jsx filename="Button icon: large size"
+import { Button } from '@capybara-design/core';
+import { Link } from 'react-router-dom';
+
+<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+  <Button component="a" href="https://github.com/guoyunhe" target="_blank" color="primary">
+    Link
+  </Button>
+  <Button component={Link} to="/" variant="fill" color="primary">
+    React Router
+  </Button>
+</div>;
+```
+
 ## Compare with other libraries
 
 | Features                 | Capybara Design | Ant Design | Fusion Design | Material UI | React Bootstrap |
