@@ -10,13 +10,14 @@
   align-items: center;
   border-radius: var(--cd-button-border-radius);
   border-style: solid;
+  box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
   font-family: var(--cd-font-family);
   gap: 4px;
   justify-content: center;
+  position: relative;
   text-decoration: none;
-  box-sizing: border-box;
 }
 
 .cd-button-block {
