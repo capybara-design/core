@@ -27,6 +27,8 @@ export function Badge({
     return max;
   }, [count, max]);
 
+  if (!computedContent) return null;
+
   return (
     <div className={cn('cd-badge', 'cd-badge-' + color, className)} style={style}>
       <div className="cd-badge-content">{computedContent}</div>
