@@ -27,7 +27,7 @@ The dialog has a overlay and prevent you from interacting with the rest of the p
 
 ```jsx
 import { useState } from 'react';
-import { Dialog, Button } from '@capybara-design/core';
+import { Dialog, DialogHeader, Button } from '@capybara-design/core';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -35,7 +35,7 @@ function App() {
     <div>
       <Button onClick={() => setOpen(true)}>Open Dialog</Button>
       <Dialog open={open} modal onClose={() => setOpen(false)}>
-        Content
+        <DialogHeader title="Dialog" subtitle="Description..." />
       </Dialog>
     </div>
   );
