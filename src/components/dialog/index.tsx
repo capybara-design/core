@@ -1,5 +1,15 @@
-import { ReactNode, forwardRef, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
+import cn from 'classnames';
+import {
+  CSSProperties,
+  ReactNode,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 import { DialogContext } from './context';
+import './index.css';
 
 export * from './header';
 
@@ -8,6 +18,8 @@ export interface DialogProps {
   onClose?: () => void;
   modal?: boolean;
   children?: ReactNode;
+  className?: string;
+  style?: CSSProperties;
 }
 
 export interface DialogRef {
@@ -16,7 +28,7 @@ export interface DialogRef {
 }
 
 export const Dialog = forwardRef<DialogRef, DialogProps>(
-  ({ open, onClose, modal, children }, ref) => {
+  ({ open, onClose, modal, children, className, style }, ref) => {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     useImperativeHandle(ref, () => {
@@ -54,7 +66,9 @@ export const Dialog = forwardRef<DialogRef, DialogProps>(
 
     return (
       <DialogContext.Provider value={{ close }}>
-        <dialog ref={dialogRef}>{children}</dialog>
+        <dialog ref={dialogRef} className={cn('cd-dialog', className)} style={style}>
+          {children}
+        </dialog>
       </DialogContext.Provider>
     );
   },

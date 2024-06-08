@@ -16,8 +16,8 @@ export function DialogHeader({ title, subtitle, className, style }: DialogHeader
   return (
     <div className={cn('cd-dialog-header', className)} style={style}>
       <div className="cd-dialog-header-content">
-        <div>{title}</div>
-        <div>{subtitle}</div>
+        <div className="cd-dialog-header-title">{title}</div>
+        <div className="cd-dialog-header-subtitle">{subtitle}</div>
       </div>
       <Button className="cd-dialog-header-close" variant="text" onClick={close}>
         &#x2715;

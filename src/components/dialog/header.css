@@ -1,4 +1,23 @@
 .cd-dialog-header {
   display: flex;
   border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.cd-dialog-header-content {
+  flex: 1 1 auto;
+  padding: 16px;
+}
+
+.cd-dialog-header-title {
+  font-size: 18px;
+}
+
+.cd-dialog-header-subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.cd-dialog-header-close {
+  font-size: 20px;
 }
