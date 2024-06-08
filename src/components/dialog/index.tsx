@@ -1,4 +1,5 @@
-import { ReactNode, forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import { ReactNode, forwardRef, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
+import { DialogContext } from './context';
 
 export interface DialogProps {
   open: boolean;
@@ -44,11 +45,17 @@ export const Dialog = forwardRef<DialogRef, DialogProps>(
       }
     }, [open]);
 
+    const close = useCallback(() => {
+      dialogRef.current?.close();
+    }, []);
+
     return (
-      <dialog ref={dialogRef}>
-        {children}
-        <button onClick={onClose}>Close</button>
-      </dialog>
+      <DialogContext.Provider value={{ close }}>
+        <dialog ref={dialogRef}>
+          {children}
+          <button onClick={onClose}>Close</button>
+        </dialog>
+      </DialogContext.Provider>
     );
   },
 );
