@@ -6,7 +6,7 @@ The dialog doesn't have a overlay and won't prevent you from interacting with th
 
 ```jsx
 import { useState } from 'react';
-import { Dialog, Button } from '@capybara-design/core';
+import { Dialog, DialogHeader, Button } from '@capybara-design/core';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ function App() {
     <div>
       <Button onClick={() => setOpen(true)}>Open Dialog</Button>
       <Dialog open={open} onClose={() => setOpen(false)}>
-        Content
+        <DialogHeader title="Dialog" subtitle="Description..." />
       </Dialog>
     </div>
   );
