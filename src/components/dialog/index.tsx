@@ -8,15 +8,16 @@ import {
   useImperativeHandle,
   useRef,
 } from 'react';
+import { Button } from '../button';
 import { DialogContext } from './context';
 import './index.css';
-
-export * from './header';
 
 export interface DialogProps {
   open: boolean;
   onClose?: () => void;
   modal?: boolean;
+  title?: ReactNode;
+  subtitle?: ReactNode;
   children?: ReactNode;
   className?: string;
   style?: CSSProperties;
@@ -28,7 +29,7 @@ export interface DialogRef {
 }
 
 export const Dialog = forwardRef<DialogRef, DialogProps>(
-  ({ open, onClose, modal, children, className, style }, ref) => {
+  ({ open, onClose, modal, title, subtitle, children, className, style }, ref) => {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     useImperativeHandle(ref, () => {
@@ -59,9 +60,14 @@ export const Dialog = forwardRef<DialogRef, DialogProps>(
       }
     }, [open]);
 
+    useEffect(() => {
+      dialogRef.current.addEventListener('close', () => {
+        onClose?.();
+      });
+    }, []);
+
     const close = useCallback(() => {
       dialogRef.current?.close();
-      onClose?.();
     }, []);
 
     return (
@@ -71,7 +77,20 @@ export const Dialog = forwardRef<DialogRef, DialogProps>(
           className={cn('cd-dialog', modal && 'cd-dialog-modal', className)}
           style={style}
         >
-          {children}
+          <header className={cn('cd-dialog-header', className)} style={style}>
+            <div className="cd-dialog-title">{title}</div>
+            <div className="cd-dialog-subtitle">{subtitle}</div>
+          </header>
+          <div className="cd-dialog-content">{children}</div>
+          <footer className="cd-dialog-footer">
+            <Button variant="fill" color="primary">
+              OK
+            </Button>
+            <Button onClick={close}>Cancel</Button>
+          </footer>
+          <Button className="cd-dialog-close" variant="text" onClick={close}>
+            &#x2715;
+          </Button>
         </dialog>
       </DialogContext.Provider>
     );

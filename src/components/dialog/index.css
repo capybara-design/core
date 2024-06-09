@@ -1,6 +1,7 @@
 .cd-dialog {
   --cd-dialog-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   --cd-dialog-close-size: 32px;
+  --cd-dialog-padding-inline: 16px;
 
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -11,4 +12,46 @@
 
 .cd-dialog-modal::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cd-dialog-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 20px;
+  display: flex;
+  width: var(--cd-dialog-close-size);
+  height: var(--cd-dialog-close-size);
+}
+
+.cd-dialog-header {
+  display: flex;
+  border-bottom: 1px solid var(--cd-color-border);
+  align-items: center;
+  padding-block: 12px;
+  padding-inline: var(--cd-dialog-padding-inline);
+}
+
+.cd-dialog-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cd-dialog-subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.cd-dialog-content {
+  padding: 12px 16px;
+}
+
+.cd-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding-block: 12px;
+  padding-inline: var(--cd-dialog-padding-inline);
+  border-top: 1px solid var(--cd-color-border);
 }

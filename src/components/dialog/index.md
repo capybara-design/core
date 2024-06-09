@@ -6,15 +6,15 @@ The dialog doesn't have a overlay and won't prevent you from interacting with th
 
 ```jsx
 import { useState } from 'react';
-import { Dialog, DialogHeader, Button } from '@capybara-design/core';
+import { Dialog, Button } from '@capybara-design/core';
 
 function App() {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Button onClick={() => setOpen(true)}>Open Dialog</Button>
-      <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogHeader title="Dialog" />
+      <Dialog title="Dialog" open={open} onClose={() => setOpen(false)}>
+        Content...
       </Dialog>
     </div>
   );
@@ -27,15 +27,15 @@ The dialog has a overlay and prevent you from interacting with the rest of the p
 
 ```jsx
 import { useState } from 'react';
-import { Dialog, DialogHeader, Button } from '@capybara-design/core';
+import { Dialog, Button } from '@capybara-design/core';
 
 function App() {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Button onClick={() => setOpen(true)}>Open Dialog</Button>
-      <Dialog open={open} modal onClose={() => setOpen(false)}>
-        <DialogHeader title="Dialog" />
+      <Dialog title="Dialog" open={open} modal onClose={() => setOpen(false)}>
+        Content...
       </Dialog>
     </div>
   );
@@ -46,15 +46,21 @@ function App() {
 
 ```jsx
 import { useState } from 'react';
-import { Dialog, DialogHeader, Button } from '@capybara-design/core';
+import { Dialog, Button } from '@capybara-design/core';
 
 function App() {
   const [open, setOpen] = useState(false);
   return (
     <div>
       <Button onClick={() => setOpen(true)}>Open Dialog</Button>
-      <Dialog open={open} modal onClose={() => setOpen(false)}>
-        <DialogHeader title="Dialog" subtitle="Description..." />
+      <Dialog
+        title="Dialog"
+        subtitle="Description..."
+        open={open}
+        modal
+        onClose={() => setOpen(false)}
+      >
+        Content...
       </Dialog>
     </div>
   );
