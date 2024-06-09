@@ -66,7 +66,11 @@ export const Dialog = forwardRef<DialogRef, DialogProps>(
 
     return (
       <DialogContext.Provider value={{ close }}>
-        <dialog ref={dialogRef} className={cn('cd-dialog', className)} style={style}>
+        <dialog
+          ref={dialogRef}
+          className={cn('cd-dialog', modal && 'cd-dialog-modal', className)}
+          style={style}
+        >
           {children}
         </dialog>
       </DialogContext.Provider>
