@@ -3,7 +3,7 @@
   --cd-dialog-close-size: 32px;
   --cd-dialog-padding-inline: 16px;
 
-  border: 1px solid #ddd;
+  border: 0;
   border-radius: 8px;
   padding: 0;
   min-width: 300px;
@@ -25,7 +25,6 @@
 }
 
 .cd-dialog-header {
-  display: flex;
   border-bottom: 1px solid var(--cd-color-border);
   align-items: center;
   padding-block: 12px;
