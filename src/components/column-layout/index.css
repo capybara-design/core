@@ -1,0 +1,16 @@
+.cd-column-layout {
+  --cd-column-layout-gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--cd-column-layout-gap);
+  align-items: center;
+}
+
+.cd-column-layout-inline {
+  display: inline-flex;
+}
+
+.cd-column-layout-wrap {
+  flex-wrap: wrap;
+}
