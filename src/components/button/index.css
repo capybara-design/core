@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.cd-button-icon svg {
+  font-size: inherit;
+}
+
 /* Colors */
 
 .cd-button-primary {
@@ -142,7 +146,7 @@
   padding-inline: var(--cd-control-padding-small);
 }
 
-.cd-button-small .cd-button-icon svg {
+.cd-button-small .cd-button-icon {
   font-size: var(--cd-button-icon-size-small);
 }
 
@@ -156,7 +160,7 @@
   padding-inline: var(--cd-control-padding);
 }
 
-.cd-button-medium .cd-button-icon svg {
+.cd-button-medium .cd-button-icon {
   font-size: var(--cd-button-icon-size);
 }
 
@@ -170,6 +174,6 @@
   padding-inline: var(--cd-control-padding-large);
 }
 
-.cd-button-large .cd-button-icon svg {
+.cd-button-large .cd-button-icon {
   font-size: var(--cd-button-icon-size-large);
 }

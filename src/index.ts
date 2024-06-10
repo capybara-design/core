@@ -7,4 +7,5 @@ export * from './components/card';
 export * from './components/column-layout';
 export * from './components/dialog';
 export * from './components/input';
+export * from './components/loader';
 export * from './components/row-layout';

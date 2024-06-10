@@ -205,6 +205,24 @@ import { Link } from 'react-router-dom';
 </div>;
 ```
 
+## Loading
+
+```jsx filename="Button icon: large size"
+import { Button } from '@capybara-design/core';
+
+<div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+  <Button loading color="primary">
+    Previous
+  </Button>
+  <Button loading variant="fill" color="primary">
+    Next
+  </Button>
+  <Button loading variant="text" color="primary">
+    Preview
+  </Button>
+</div>;
+```
+
 ## Compare with other libraries
 
 | Features                 | Capybara Design | Ant Design | Fusion Design | Material UI | React Bootstrap |
