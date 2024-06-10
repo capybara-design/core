@@ -207,18 +207,18 @@ import { Link } from 'react-router-dom';
 
 ## Loading
 
-```jsx filename="Button icon: large size"
+```jsx filename="Loading button"
 import { Button } from '@capybara-design/core';
 
 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
   <Button loading color="primary">
-    Previous
+    Loading
   </Button>
   <Button loading variant="fill" color="primary">
-    Next
+    Loading
   </Button>
   <Button loading variant="text" color="primary">
-    Preview
+    Loading
   </Button>
 </div>;
 ```

@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { ComponentProps, ReactNode } from 'react';
+import { Loader } from '../loader';
 import './index.css';
 
 export type ButtonProps<C> = {
@@ -12,6 +13,8 @@ export type ButtonProps<C> = {
   block?: boolean;
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
+  loading?: boolean;
+  disabled?: boolean;
 };
 
 export function Button<
@@ -26,6 +29,8 @@ export function Button<
   size = 'medium',
   iconStart,
   iconEnd,
+  disabled,
+  loading,
   ...rest
 }: ButtonProps<C> & ComponentProps<C>) {
   const Comp = component || 'button';
@@ -38,9 +43,12 @@ export function Button<
         'cd-button-' + color,
         'cd-button-' + size,
       )}
+      disabled={disabled || loading}
       {...(rest as any)}
     >
-      {iconStart && <span className="cd-button-icon cd-button-icon-start">{iconStart}</span>}
+      {(iconStart || loading) && (
+        <span className="cd-button-icon cd-button-icon-start">{iconStart || <Loader />}</span>
+      )}
       <span className="cd-button-content">{children}</span>
       {iconEnd && <span className="cd-button-icon cd-button-icon-end">{iconEnd}</span>}
     </Comp>
