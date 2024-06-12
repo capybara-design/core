@@ -43,6 +43,11 @@
   "eslintConfig": {
     "extends": "eslint-config-rive"
   },
+  "dependencies": {
+    "@remixicon/react": "^4.2.0",
+    "classnames": "^2.5.1",
+    "react-bootstrap-icons-pro": "^1.1.4"
+  },
   "devDependencies": {
     "@mdx-js/react": "^3.0.1",
     "@testing-library/react": "^15.0.7",
@@ -59,12 +64,17 @@
   "rive": {
     "template": "base",
     "doc": {
-      "basename": "/core/"
+      "basename": "/core/",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English"
+        },
+        {
+          "code": "zh",
+          "name": "中文"
+        }
+      ]
     }
-  },
-  "dependencies": {
-    "@remixicon/react": "^4.2.0",
-    "classnames": "^2.5.1",
-    "react-bootstrap-icons-pro": "^1.1.4"
   }
 }
