@@ -9,3 +9,4 @@ export * from './components/dialog';
 export * from './components/input';
 export * from './components/loader';
 export * from './components/row-layout';
+export * from './components/select';
