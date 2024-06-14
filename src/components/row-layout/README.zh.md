@@ -1,6 +1,6 @@
 # RowLayout 行布局
 
-## Default
+## 默认
 
 ```jsx filename="Default"
 import { Button, RowLayout } from '@capybara-design/core';
@@ -12,7 +12,7 @@ import { Button, RowLayout } from '@capybara-design/core';
 </RowLayout>;
 ```
 
-## Gap/Spacing
+## 间距
 
 ```jsx filename="Gap in pixels"
 import { Button, RowLayout } from '@capybara-design/core';
@@ -34,7 +34,7 @@ import { Button, RowLayout } from '@capybara-design/core';
 </RowLayout>;
 ```
 
-## Wrap
+## 折行
 
 ```jsx filename="Wrap"
 import { Button, RowLayout } from '@capybara-design/core';
@@ -48,7 +48,7 @@ import { Button, RowLayout } from '@capybara-design/core';
 </div>;
 ```
 
-## Inline
+## 行内
 
 ```jsx filename="Inline"
 import { Button, RowLayout } from '@capybara-design/core';
