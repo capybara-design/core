@@ -1011,7 +1011,7 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   <span>Other stuff...</span>
 </div>;
 `})})]})}function $h(e={}){const{wrapper:t}={...Ee(),...e.components};return t?y.jsx(t,{...e,children:y.jsx(ds,{...e})}):ds(e)}$h.displayName="MDXContent";const yk=Object.freeze(Object.defineProperty({__proto__:null,default:$h,filepath:ck,frontmatter:pk,title:uk},Symbol.toStringTag,{value:"Module"})),dk="src/components/row-layout/README.zh.md",sk="RowLayout 行布局",Ok=void 0;function ss(e){const t={code:"code",h1:"h1",h2:"h2",pre:"pre",...Ee(),...e.components};return y.jsxs(y.Fragment,{children:[y.jsx(t.h1,{children:"RowLayout 行布局"}),`
-`,y.jsx(t.h2,{children:"Default"}),`
+`,y.jsx(t.h2,{children:"默认"}),`
 `,y.jsx(t.pre,{filename:"Default",imports:{Button:ue,RowLayout:Mt},children:y.jsx(t.code,{className:"language-jsx",children:`import { Button, RowLayout } from '@capybara-design/core';
 
 <RowLayout>
@@ -1020,7 +1020,7 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   <Button size="large">Large Button</Button>
 </RowLayout>;
 `})}),`
-`,y.jsx(t.h2,{children:"Gap/Spacing"}),`
+`,y.jsx(t.h2,{children:"间距"}),`
 `,y.jsx(t.pre,{filename:"Gap in pixels",imports:{Button:ue,RowLayout:Mt},children:y.jsx(t.code,{className:"language-jsx",children:`import { Button, RowLayout } from '@capybara-design/core';
 
 <RowLayout gap={20}>
@@ -1037,7 +1037,7 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   <Button size="large">Large Button</Button>
 </RowLayout>;
 `})}),`
-`,y.jsx(t.h2,{children:"Wrap"}),`
+`,y.jsx(t.h2,{children:"折行"}),`
 `,y.jsx(t.pre,{filename:"Wrap",imports:{Button:ue,RowLayout:Mt},children:y.jsx(t.code,{className:"language-jsx",children:`import { Button, RowLayout } from '@capybara-design/core';
 
 <div style={{ maxWidth: 300 }}>
@@ -1048,7 +1048,7 @@ import { BiCheck2 } from 'react-bootstrap-icons-pro';
   </RowLayout>
 </div>;
 `})}),`
-`,y.jsx(t.h2,{children:"Inline"}),`
+`,y.jsx(t.h2,{children:"行内"}),`
 `,y.jsx(t.pre,{filename:"Inline",imports:{Button:ue,RowLayout:Mt},children:y.jsx(t.code,{className:"language-jsx",children:`import { Button, RowLayout } from '@capybara-design/core';
 
 <div>
